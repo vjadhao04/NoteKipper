@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="start|top"
+            android:ems="10"
+            android:id="@+id/noteText"
+            app:layout_constraintEnd_toEndOf="@+id/notetitle"
+            app:layout_constraintStart_toStartOf="@+id/notetitle" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/notetitle"
+            app:layout_constraintHorizontal_bias="0.0" android:hint="Note Text"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.084"/>
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:theme="@style/Theme.NoteKipper.AppBarOverlay"
+            tools:ignore="MissingConstraints"
+            android:id="@+id/appBarLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_dialog_email"
+            tools:ignore="MissingConstraints"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="TODO"/>
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.NoteKipper.PopupOverlay"
+            tools:ignore="MissingConstraints" app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            android:layout_marginBottom="675dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <Spinner
+            android:layout_width="350dp"
+            android:layout_height="49dp" android:id="@+id/spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" android:textAlignment="center"
+            app:layout_constraintHorizontal_bias="0.666" app:layout_constraintTop_toTopOf="@+id/appBarLayout"
+            android:layout_marginTop="116dp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="start|top"
+            android:ems="10"
+            android:id="@+id/notetitle"
+            android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"
+            android:hint="Note Title" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp" app:layout_constraintHorizontal_bias="0.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
